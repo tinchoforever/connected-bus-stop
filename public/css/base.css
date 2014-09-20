@@ -36,3 +36,8 @@ iframe.instagtam {width:400px; }
 
 .content .centered{text-align: center;}
 .tema {color:white;}
+
+
+.btn.big-font{
+	font-size:3em;
+}

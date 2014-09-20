@@ -1,20 +1,29 @@
-extends layout
+doctype html
+html
+  head
+    title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    link(href='/css/lumen.bootstrap.css', rel='stylesheet', type='text/css')
+    link(href='/css/fonts.css', rel='stylesheet', type='text/css')
+    link(href='/css/base.css', rel='stylesheet', type='text/css')
+    link(href='/css/animate.css', rel='stylesheet', type='text/css')
+    link(href='/owl-carousel/owl.theme.css', rel='stylesheet', type='text/css')
+    link(href='/owl-carousel/owl.carousel.css', rel='stylesheet', type='text/css')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/libs/angular/1.1.5/angular.min.js')
+    script(src='/bower_components/moment/moment.js')
+    script(src='/bower_components/angular-moment/angular-moment.js')
+    script(src='/js/libs/moment/moment-es.js')
+    script(src='/js/libs/numberToText-es.js')
+    script(src='/js/libs/jquery-1.9.1.min.js')
+    script(src='/owl-carousel/owl.carousel.js')
+    meta(charset='utf-8')
+  body
+    .row
+      div(ng-app='connected-bus')
+        #app.ng-scope-view(ng-view='ng-view')
+  script(src='/js/apps/core/controllers/main.js')
+  script(src='/js/apps/core/controllers/remote.js')
+  script(src='/js/apps/core/controllers/detail.js')
+  script(src='/js/apps/core/app.js')
 
-block content
-    header
-    div(ng-app="fact-followers", class="")
-        div(ng-view,id="app" class=" ng-scope-view")
-    footer
-
-
-block scripts
-    script(src='/js/apps/core/controllers/main.js')
-    script(src='/js/apps/core/controllers/feed.js')
-    script(src='/js/apps/core/controllers/detail.js')
-    script(src='/js/apps/core/controllers/wizard/compose.js')
-    script(src='/js/apps/core/controllers/wizard/create-fact.js')
-    script(src='/js/apps/core/controllers/wizard/thanks.js')
-    script(src='/js/apps/core/controllers/wizard/thanks-url.js')
-    script(src='/js/apps/core/controllers/wizard/validate-fact.js')
-    script(src='/js/apps/core/app.js')
-    script(src='/js/libs/yt-widget-angular.js')

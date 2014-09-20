@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('connected-bus', ['connected-bus.controllers'])
+angular.module('connected-bus', ['connected-bus.controllers','angularMoment'])
 .config(function ($routeProvider) {
   $routeProvider
   .when('/', {
@@ -20,4 +20,4 @@ angular.module('connected-bus', ['connected-bus.controllers'])
   });
 }).run(function ($rootScope) {
     moment().lang('es');
-  });
+});

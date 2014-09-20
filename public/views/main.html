@@ -12,26 +12,13 @@
             </div>
             <div class="row">
 
-            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 centered">
-                <h1>60 </h1>
-                <h4><small>en 15 minutos</small></h4>
-                  <h5><small>el ultimo paso hace 2 minutos</small></h5>
+            <div ng-repeat="b in bus"class="col-lg-3 col-md-3 col-sm-2 col-xs-6 centered">
+                <a href="/#/detail/">
+                  <h1>{{b.id}} </h1>
+                  <h4><small >en <span  am-time-ago="b.estimation"></span></small></h4>
+                  <h5><small>el ultimo paso hace <span  am-time-ago="b.timestamp"></span></small></h5>
+                </a>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 centered">
-                <h1>168 </h1>
-                 <h4><small>en 15 minutos</small></h4>
-                 <h5><small>el ultimo paso hace 3 minutos</small></h5>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 centered">
-                <h1>152 </h1>
-                <h4><small>en 15 minutos</small></h4>
-                  <h5><small>el ultimo paso hace 1 minuto</small></h5>
-            </div>
-             <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 centered">
-                <h1>71 </h1>
-                <h4><small>en 15 minutos</small></h4>
-                  <h5><small>el ultimo paso hace 2 minutos</small></h5>
-            </div>
-
+            
             </div>
 </div>
