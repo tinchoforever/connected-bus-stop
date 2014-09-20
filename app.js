@@ -51,34 +51,42 @@ if (process.env.NODE_ENV ==='production'){
 io.sockets.on('connection', function(socket) {
   mainSocket = socket;
   socket.on('mock-bus',function(data){
-    console.log('mock-bus', data);
+    console.log('mock-bus', data);  
   	io.sockets.emit('new-bus', data);
   });
 	 	
 });
 
 
-// var SerialPort = require("serialport").SerialPort
-// var serialPort = new SerialPort("/dev/cu.usbmodemfa141", {
-//     baudrate: 9600
-// });
+var SerialPort = require("serialport").SerialPort
+var serialPort = new SerialPort("/dev/cu.usbmodemfd13141", {
+    baudrate: 9600
+});
 
-// // var receivedData = '';
-// serialPort.on("open", function() {
-//   console.log('Arudino online!');
-//   serialPort.on('data', function(data) {
+var receivedData = '';
+serialPort.on("open", function() {
+  console.log('Arudino online!');
+  serialPort.on('data', function(data) {
       
 
-//       receivedData += data.toString();
-//       // console.log(data.toString());
-//       if (receivedData.indexOf('E') >= 0 && receivedData .indexOf('B') >= 0) {
-//       //  // save the data between 'B' and 'E'
-//          sendData = receivedData.substring(receivedData .indexOf('B') + 1, receivedData .indexOf('E'));
-//          receivedData = '';
-//          console.log('sending', sendData);
-//      	 mainSocket.emit("bondi", {id:166});
-//        }
+      receivedData += data.toString();
+      // console.log(data.toString());
+      if (receivedData.indexOf('E') >= 0 && receivedData .indexOf('B') >= 0) {
+      //  // save the data between 'B' and 'E'
+         sendData = receivedData.substring(receivedData .indexOf('B') + 1, receivedData .indexOf('E'));
+         receivedData = '';
+         console.log('sending', sendData);
+         var id = 0;
+         if (sendData =='E24867484854505252535555683B'){
+          id=60;
+         }
+         else if (sendData =='E24867484852556850535067663B'){
+          id=168;
+         }
+        io.sockets.emit('new-bus', {id:id});
+     	   
+       }
 
-//   });
+  });
 
-// });
+});
