@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="centered ten columns" ng-hide="detail">
+    <h3> 2 Nite @ Austin</h3>
+    <h4> There are {{concerts.length}} concerts</h4>
+      <div id="owl-demo" style="display:none">
+      <div class="item" ng-repeat="item in concerts">
+        <div class="box">
+          <iframe width="560" height="315" ng-src="//www.youtube.com/embed/{{item.video}}" frameborder="0" allowfullscreen></iframe>
+          <div class="content">
+                    <p class="title"> {{item.name}} @ {{item.where}}</p>
+                     <div class="medium primary btn">
+                     <a ng-click="showThis(item)" href="">Want 2 Go!</a>
+                    </div>
+                     <div class="medium danger btn">
+                     <a href="">Next   ! </a>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="centered ten columns" ng-show="detail">
+    <h3> 2 Nite @ Austin</h3>
+      <div id="owl-demo">
+        <div class="box">
+          <iframe width="560" height="315" ng-src="//www.youtube.com/embed/{{detail.video}}" frameborder="0" allowfullscreen></iframe>
+          <div class="content">
+              <p class="title"> {{detail.name}} @ {{detail.where}}</p>
+              <ul class="socbtns">
+                <li><div class="btn primary"><a ng-click="sendNow(detail)">Tweet it!</a></div></li>
+              </ul>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    header
+    div(ng-app="fact-followers", class="")
+        div(ng-view,id="app" class=" ng-scope-view")
+    footer
+
+
+block scripts
+    script(src='/js/apps/core/controllers/main.js')
+    script(src='/js/apps/core/controllers/feed.js')
+    script(src='/js/apps/core/controllers/detail.js')
+    script(src='/js/apps/core/controllers/wizard/compose.js')
+    script(src='/js/apps/core/controllers/wizard/create-fact.js')
+    script(src='/js/apps/core/controllers/wizard/thanks.js')
+    script(src='/js/apps/core/controllers/wizard/thanks-url.js')
+    script(src='/js/apps/core/controllers/wizard/validate-fact.js')
+    script(src='/js/apps/core/app.js')
+    script(src='/js/libs/yt-widget-angular.js')

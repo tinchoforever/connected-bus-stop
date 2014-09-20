@@ -1,0 +1,35 @@
+body {color:#000; background-color: #FFF;background-image:none;font-family: "HelveticaNeue-Condensed","Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+body{overflow-x: hidden;}
+img {padding: 0 0 0 0; }
+a {color: #313131;}
+h1 {font-size: 5em;}
+h2 {font-size: 4em;}
+h3 {font-size: 3em;}
+h4 {font-size: 2em;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 0.8em;}
+
+.right {float: right;}
+.left {float:left;}
+
+
+.mobile-menu.facebook {top:1em;}
+.mobile-menu.twitter {top:1em;}
+
+/*.columns, .row,.row .row, .rows {border: 0;margin: 0;padding: 0;}
+.row.main, .row.contentgallery, .row.footer {width:auto;}
+.four-half, .row .four-half { width: 37.5%; }
+.one-half, .row .one.half { width: 12.5%; }
+.container {margin-left: auto;margin-right: auto;}*/
+
+.centered h1{text-align: center;}
+.centered h2{text-align: center;}
+.centered h3{text-align: center;}
+.centered h4{text-align: center;}
+.centered p{text-align: center;}
+
+.centered {text-align: center;}
+
+.btn {padding: 20px;}
+
+iframe.instagtam {width:400px; }

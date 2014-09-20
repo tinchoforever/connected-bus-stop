@@ -1,0 +1,54 @@
+body {
+    background: url(/images/background.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+#content {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 990px;
+}
+
+#header {
+	width: 990px;
+	height: 223px;
+    float: left;
+}
+
+#player {
+	width: 480px;
+	height: 270px;
+	margin-left: 20px;
+    float: left;
+}
+
+#footer {
+	height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 990px;
+	float:left;
+	position:relative;
+}
+
+#info {
+	width: 990px;
+	height: 528px;
+    float: left;
+	margin-top: 10px;
+	position:absolute;
+}
+
+#fb {
+	width: 450px;
+	height: 35px;
+    margin-left: 430px;
+	float:left;
+
+	z-index: 1;
+	position:absolute;
+	top: 20px;
+
+}
