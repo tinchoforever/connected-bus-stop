@@ -11,22 +11,22 @@ ff.controller('mainController', function ($scope,$location, $timeout, $http) {
     bus.push({
     	id:60,
     	timestamp: Date.parse('2014-09-20 14:22'), 
-    	estimation: Date.parse('2014-09-20 15:03'), 
+    	estimation: moment(new Date()).add(Math.floor((Math.random() * 10) + 1), 'minutes'),
     });
     bus.push({
     	id:168,
     	timestamp: Date.parse('2014-09-20 14:23'), 
-    	estimation: Date.parse('2014-09-20 15:04'), 
+    	estimation: moment(new Date()).add(Math.floor((Math.random() * 10) + 1), 'minutes'),
     });
     bus.push({
     	id:152,
 		timestamp: Date.parse('2014-09-20 14:23'), 
-    	estimation: Date.parse('2014-09-20 15:04'), 
+    	estimation: moment(new Date()).add(Math.floor((Math.random() * 10) + 1), 'minutes'), 
     });
     bus.push({
     	id:71,
     	timestamp: Date.parse('2014-09-20 14:23'), 
-    	estimation: Date.parse('2014-09-20 15:04'), 
+    	estimation: moment(new Date()).add(Math.floor((Math.random() * 10) + 1), 'minutes'),
     });
 
 
@@ -43,10 +43,25 @@ ff.controller('mainController', function ($scope,$location, $timeout, $http) {
 				var b = $scope.bus[i];
 				if (b.id == data.id){
 					b.timestamp = new Date();
-					b.estimation = new Date();
+					b.estimation = $scope.getEstimate(b);
 				}
 			};	
 		})
 		
-	})
+	});
+
+	$scope.getEstimate =function(b){
+		
+		// if (b.history){
+		// b.history.push(b);
+
+		// if (b.history.lenght > 5){
+		// 	b.history.shift();
+		// }
+		
+
+		return moment(new Date()).add(Math.floor((Math.random() * 10) + 1), 'minutes');
+		
+	}
+
 });
