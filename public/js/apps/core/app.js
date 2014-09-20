@@ -11,7 +11,7 @@ angular.module('connected-bus', ['connected-bus.controllers','angularMoment'])
     templateUrl: '/views/remote.html',
     controller: 'remoteController'
   })
-  .when('/detail', {
+  .when('/detail/:id', {
     templateUrl: '/views/detail.html',
     controller: 'detailController'
   })
