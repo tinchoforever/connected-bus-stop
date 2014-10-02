@@ -12,7 +12,7 @@
             </div>
             <div class="row">
 
-            <div ng-repeat="b in bus"class="col-lg-3 col-md-4 col-sm-3 col-xs-6 centered">
+            <div ng-repeat="b in bus"class="bondi-{{b.id}} col-lg-3 col-md-4 col-sm-3 col-xs-6 centered">
                 <a ng-href="/#/detail/{{b.id}}">
                   <h1>{{b.id}} </h1>
                   <h4><small ><span  am-time-ago="b.estimation"></span></small></h4>

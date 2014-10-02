@@ -59,7 +59,7 @@ io.sockets.on('connection', function(socket) {
 
 
 // var SerialPort = require("serialport").SerialPort
-// var serialPort = new SerialPort("/dev/cu.usbmodemfd13141", {
+// var serialPort = new SerialPort("/dev/cu.usbmodemfa141", {
 //     baudrate: 9600
 // });
 

@@ -42,3 +42,22 @@ iframe.instagtam {width:400px; }
 .btn.big-font{
 	font-size:3em;
 }
+
+div.bondi-60 {
+	color: red !important;
+	background-color: rgb(255, 186, 0);
+}
+
+div.bondi-168 {
+	background-color: rgb(225, 16, 16);
+	color: white;
+}
+
+div.bondi-152 {
+	background-color: rgb(0,255, 0);
+	color: white;
+}
+div.bondi-152 {
+	background-color: rgb(56, 56, 255);
+	color: white;
+}
